@@ -1,0 +1,57 @@
+{
+  "name": "esdipi",
+  "version": "0.0.0",
+  "description": "SDP Compression Algorithm for WebRTC",
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js",
+    "./CleanSdp": "./lib/CleanSdp.js",
+    "./Compress": "./lib/Compress.js",
+    "./Decompress": "./lib/Decompress.js",
+    "./PipelineStream": "./lib/PipelineStream.js",
+    "./Readlines": "./lib/Readlines.js",
+    "./SdpCleaner": "./lib/SdpCleaner.js",
+    "./cli": "./lib/cli.js",
+    "./prefix": "./lib/prefix.js"
+  },
+  "bin": {
+    "esdipi": "server.js",
+    "esdipi-prefix": "bin/prefix.js"
+  },
+  "scripts": {
+    "prefix": "bin/prefix.js",
+    "test": "c8 --all --src lib node --test | tap-color"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piranna/ESDiPi.git"
+  },
+  "keywords": [
+    "ESDiPi",
+    "paper",
+    "SDP",
+    "compression",
+    "WebRTC",
+    "prefix",
+    "LZ77",
+    "lossy",
+    "lossless",
+    "Offer",
+    "Answer",
+    "session description",
+    "Lempel-Ziv"
+  ],
+  "author": "Jesús Leganés-Combarro 'piranna' <piranna@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piranna/ESDiPi/issues"
+  },
+  "homepage": "https://github.com/piranna/ESDiPi#readme",
+  "dependencies": {
+    "bl": "^6.0.0"
+  },
+  "devDependencies": {
+    "c8": "^7.12.0",
+    "tap-color": "^1.2.0"
+  }
+}
